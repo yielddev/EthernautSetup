@@ -21,6 +21,7 @@ contract GateKeeperSolver {
     // 8191 * 10 = 81910 + 10 = 81920 + 2100 = 84020
     for (uint256 i = 0; i < 500; i++) {
         try gateKeeper.enter{gas: i+150+8191*3}(key) {
+            
             break;
         } catch {
             continue;
